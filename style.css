@@ -147,7 +147,7 @@ body {
   left: 0; right: 0;
   background-color: var(--accent);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.9s ease;
   z-index: -1;  /* чтобы фон был под текстом */
   border-radius: 0; /* или поставь нужные радиусы, если надо */
 }
