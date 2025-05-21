@@ -157,8 +157,19 @@ body {
   opacity: 1;
 }
 
+/* Цвет текста кнопок меню в светлой теме */
+[data-theme="light"] .menu-button {
+  color: var(--text-light);
+}
+
+/* Цвет текста кнопок меню в тёмной теме */
+[data-theme="dark"] .menu-button {
+  color: var(--text-dark);
+}
+
+/* При наведении не меняем цвет текста */
 .menu-button:hover {
-  color: var(--text-dark); /* цвет текста на подсветке — светлый */
+  /* color не меняем, оставляем базовый */
 }
 
 .theme-toggle-button {
