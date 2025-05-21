@@ -188,6 +188,7 @@ body {
 .about-left,
 .about-right {
   font-family: 'Rubik', sans-serif;
+  font-weight: 400;
   transition: transform 0.5s ease;
   padding: 0 1rem;
 }
@@ -206,6 +207,7 @@ body {
   pointer-events: none;
   transition: opacity 0.5s ease;
   z-index: 1;
+  border-radius: 2rem; /* добавили скругление */
 }
 
 .about-button.open {
@@ -213,18 +215,17 @@ body {
 }
 
 .about-button.open .about-left {
-  transform: translateX(-100%);
+  transform: translateX(-calc(50vw + 2rem)); /* раздвигаем сильнее */
 }
 
 .about-button.open .about-right {
-  transform: translateX(100%);
+  transform: translateX(calc(50vw + 2rem)); /* симметрично вправо */
 }
 
 .about-button.open .about-content {
   opacity: 1;
   pointer-events: auto;
 }
-
 
 .theme-toggle-button {
   position: fixed;
