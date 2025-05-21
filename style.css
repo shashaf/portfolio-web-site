@@ -67,17 +67,32 @@ body {
   flex-shrink: 0;
 }
 
-.spacer {
-  height: 50vh;
+/* Удаляем .spacer полностью, поэтому удаляем и его стили */
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  padding-top: 0; /* можно явно убрать, если где-то есть */
 }
+
+/* Основное меню */
 
 .main-nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 90vh;
-  justify-content: space-around;
+  height: 90vh; /* Можно подстроить, если надо */
+  justify-content: center; /* Меню ближе к верху, центрируем вертикально */
+  gap: 2rem; /* Добавим отступы между пунктами для воздушности */
 }
+
+/* Увеличиваем размер текста меню */
 
 .main-nav ul {
   list-style: none;
@@ -85,10 +100,25 @@ body {
   margin: 0;
 }
 
+.main-nav li {
+  font-family: 'Rubik', sans-serif;
+  font-size: 5vw; /* примерно 5% ширины экрана, увеличенный размер */
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.main-nav li:hover {
+  color: var(--accent);
+}
+
+/* Можно оставить старый класс .menu-button, если он используется */
+
 .menu-button {
-  font-family: 'Rubik';
-  font-size: 1.5rem;
-  padding: 1em;
+  font-family: 'Rubik', sans-serif;
+  font-size: 5vw; /* совпадает с li */
+  padding: 0.5em 1em;
   background: none;
   border: none;
   cursor: pointer;
@@ -105,25 +135,4 @@ body {
   height: 4px;
   background-color: var(--accent);
   animation: fadeOut 1s ease forwards;
-}
-
-@keyframes fadeOut {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-.collapsible {
-  display: none;
-  padding: 2em;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.collapsible.active {
-  display: block;
-}
-
-footer {
-  text-align: center;
-  padding: 2em;
 }
