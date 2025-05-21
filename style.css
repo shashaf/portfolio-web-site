@@ -147,7 +147,7 @@ body {
   left: 0; right: 0;
   background-color: var(--accent);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.9s ease;
   z-index: -1;  /* чтобы фон был под текстом */
   border-radius: 0; /* или поставь нужные радиусы, если надо */
 }
@@ -157,8 +157,14 @@ body {
   opacity: 1;
 }
 
-.menu-button:hover {
-  color: var(--text-dark); /* цвет текста на подсветке — светлый */
+/* Цвет текста кнопок меню в светлой теме */
+[data-theme="light"] .menu-button {
+  color: var(--text-light);
+}
+
+/* Цвет текста кнопок меню в тёмной теме */
+[data-theme="dark"] .menu-button {
+  color: var(--text-dark);
 }
 
 .theme-toggle-button {
