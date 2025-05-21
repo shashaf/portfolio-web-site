@@ -4,18 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Имя Фамилия — Портфолио</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="hero">
-    <h1><span class="first-name">Имя</span><span class="roles-marquee">Разработчик • Аналитик • Геймдизайнер •</span><span class="last-name">Фамилия</span></h1>
+    <h1 class="first-name">Имя</h1>
+    <div class="roles-marquee">Разработчик • Аналитик • Геймдизайнер •</div>
+    <h1 class="last-name">Фамилия</h1>
   </header>
+
+  <div class="spacer"></div>
 
   <nav class="main-nav">
     <ul>
-      <li><button data-target="about">Обо мне</button></li>
-      <li><button data-target="portfolio">Портфолио</button></li>
-      <li><button data-target="contact">Контакты</button></li>
+      <li><button class="menu-button" data-target="about">Обо мне</button></li>
+      <li><button class="menu-button" data-target="portfolio">Портфолио</button></li>
+      <li><button class="menu-button" data-target="contact">Контакты</button></li>
     </ul>
   </nav>
 
@@ -27,32 +32,7 @@
 
     <section id="portfolio" class="collapsible">
       <h2>Портфолио</h2>
-      <div class="project-group">
-        <h3>📊 Бизнес-аналитика и управление</h3>
-        <ul>
-          <li>Разработка цифровых процессов (датасет по плачу, Telegram-бот, <a href="ссылка-на-док">документ</a>)</li>
-          <li>GDD для собственного игрового проекта — <em>в разработке</em></li>
-        </ul>
-
-        <h3>🐍 Python</h3>
-        <ul>
-          <li>Система Telegram-ботов (репозиторий приватный)</li>
-          <li>Анализ повторов в песнях</li>
-        </ul>
-
-        <h3>🎮 Игровая разработка</h3>
-        <ul>
-          <li>Прототип на GameMaker</li>
-          <li>Игра для геймджема (2 место)</li>
-          <li>Демоверсия большого проекта</li>
-        </ul>
-
-        <h3>🌐 Веб</h3>
-        <ul>
-          <li>Страница статус-апдейтов для игры</li>
-          <li>Этот сайт-портфолио</li>
-        </ul>
-      </div>
+      <p>Работы и проекты...</p>
     </section>
 
     <section id="contact" class="collapsible">
@@ -63,7 +43,7 @@
   </main>
 
   <footer>
-    <button id="toggle-theme">🌓 Переключить тему</button>
+    <button id="toggle-theme">🌃 Переключить тему</button>
   </footer>
 
   <script src="script.js"></script>
