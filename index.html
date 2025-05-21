@@ -1,109 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Моё портфолио</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ваше Имя - Портфолио</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><a href="#about">Обо мне</a></li>
+      <li><a href="#projects">Проекты</a></li>
+      <li><a href="#contact">Контакты</a></li>
+    </ul>
+  </nav>
 
   <header>
-    <h1>Твоё Имя</h1>
+    <h1>ВАШЕ <span class="eye">O</span> ИМЯ</h1>
     <p>Разработчик, аналитик и геймдизайнер</p>
   </header>
 
-  <main>
+  <section id="about">
+    <h2>Обо мне</h2>
+    <p>Краткая информация о вас.</p>
+  </section>
 
-    <section id="analytics">
-      <h2>Бизнес-аналитика и управление</h2>
-
-      <div class="project">
-        <h3>Цифровой сбор данных — "Датасет по плачу"</h3>
-        <p>Разработка процессов, документация, управление проектом. <a href="https://t.me/your_channel" target="_blank">Telegram-канал</a>.</p>
-        <p><a href="https://docs.google.com/document/..." target="_blank">Google-документ (кейсовое описание)</a></p>
+  <section id="projects">
+    <h2>Проекты</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-header">Бизнес-аналитика и управление</button>
+        <div class="accordion-content">
+          <p>Описание проектов в этой категории.</p>
+        </div>
       </div>
+      <!-- Повторить для других категорий -->
+    </div>
+  </section>
 
-      <div class="project">
-        <h3>GDD для собственной игры <em>(в разработке)</em></h3>
-        <p>Структурированное проектирование механик, сюжетных элементов и визуального стиля игры.</p>
-      </div>
-    </section>
+  <section id="contact">
+    <h2>Контакты</h2>
+    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+    <p>Telegram: <a href="https://t.me/your_nickname">@your_nickname</a></p>
+  </section>
 
-    <section id="python">
-      <h2>Python-разработка</h2>
-
-      <div class="project">
-        <h3>Система Telegram-ботов</h3>
-        <p>Для проекта с датасетом: взаимодействие с пользователями, сбор данных.</p>
-        <p><strong>Важно:</strong> исходный код приватен (включает токены), но <a href="#bots-code">см. пример реализации ниже</a>.</p>
-      </div>
-
-      <div class="project">
-        <h3>Анализ повторений слов</h3>
-        <p>Небольшое утилитарное приложение для анализа текстов песен.</p>
-      </div>
-    </section>
-
-    <section id="games">
-      <h2>Игровая разработка</h2>
-
-      <div class="project">
-        <h3>Фанатская игра на GameMaker</h3>
-        <p>Игровой прототип в жанре Undertale. Проработка боевой системы и анимации.</p>
-      </div>
-
-      <div class="project">
-        <h3>Игра для геймджема — 2 место</h3>
-        <p>Игра в рамках Undertale Battles Jam.</p>
-      </div>
-
-      <div class="project">
-        <h3>Демоверсия большого проекта <em>(в разработке)</em></h3>
-        <p>Первый шаг к полнофункциональной версии игры.</p>
-      </div>
-    </section>
-
-    <section id="web">
-      <h2>Веб-разработка</h2>
-
-      <div class="project">
-        <h3>Страница статус-апдейтов</h3>
-        <p>Простой сайт для публикации обновлений разработки.</p>
-      </div>
-
-      <div class="project">
-        <h3>Сайт-портфолио</h3>
-        <p>Текущая страница, созданная вручную с HTML/CSS.</p>
-      </div>
-    </section>
-
-    <section id="bots-code">
-      <h2>Пример кода Telegram-бота (без токена)</h2>
-      <pre><code>
-import telebot
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
-TOKEN = os.getenv("BOT_TOKEN")
-bot = telebot.TeleBot(TOKEN)
-
-@bot.message_handler(commands=['start'])
-def start(message):
-    bot.send_message(message.chat.id, "Привет! Я собираю данные.")
-
-bot.polling()
-      </code></pre>
-    </section>
-
-    <section id="contact">
-      <h2>Контакты</h2>
-      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-      <p>Telegram: <a href="https://t.me/your_nickname" target="_blank">@your_nickname</a></p>
-    </section>
-
-  </main>
-
+  <script src="script.js"></script>
 </body>
 </html>
