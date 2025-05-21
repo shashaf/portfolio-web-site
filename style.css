@@ -168,61 +168,63 @@ body {
 }
 
 .about-button {
-  position: relative;
+  font-family: 'Rubik', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: auto;
-  overflow: hidden;
+  position: relative;
+  height: 5vw;
+  font-size: 5vw;
+  font-weight: 600;
+  color: var(--accent);
+  cursor: pointer;
   transition: height 0.5s ease;
+  overflow: hidden;
+  user-select: none;
+  width: 100vw;
+  text-align: center;
+}
+
+.about-left,
+.about-right {
+  font-family: 'Rubik', sans-serif;
+  transition: transform 0.5s ease;
+  padding: 0 1rem;
+}
+
+.about-content {
+  position: absolute;
+  background-color: black;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  padding: 1.5rem;
+  width: 40vw;
+  max-width: 90vw;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 1;
 }
 
 .about-button.open {
   height: 50vh;
-  background-color: var(--accent); /* активный синий фон */
 }
 
-/* Левая и правая часть текста */
-.about-left,
-.about-right {
-  transition: transform 0.5s ease;
-  z-index: 2;
-  padding: 0 0.5em;
-}
-
-/* При активации — раздвигаются */
 .about-button.open .about-left {
   transform: translateX(-100%);
 }
+
 .about-button.open .about-right {
   transform: translateX(100%);
 }
 
-/* Скрытая плашка с текстом */
-.about-content {
-  position: absolute;
-  background: black;
-  color: white;
-  padding: 1em;
-  z-index: 1;
-  max-width: 90vw;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  border-radius: 0.5em;
-}
-
-/* Показываем при открытии */
 .about-button.open .about-content {
   opacity: 1;
+  pointer-events: auto;
 }
 
-/* Изначально скрыта */
-.hidden {
-  display: block;
-  pointer-events: none;
-  opacity: 0;
-}
 
 .theme-toggle-button {
   position: fixed;
