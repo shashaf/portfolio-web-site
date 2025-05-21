@@ -117,10 +117,6 @@ body {
   transition: color 0.3s ease;
 }
 
-.main-nav li:hover {
-  color: var(--accent);
-}
-
 /* Можно оставить старый класс .menu-button, если он используется */
 
 .menu-button {
@@ -190,7 +186,8 @@ body {
 }
 
 .about-button:hover {
-  color: inherit;
+  background-color: var(--accent);
+  color: var(--text-light);
 }
 
 .about-left,
@@ -199,6 +196,8 @@ body {
   font-weight: 400;
   transition: transform 0.5s ease;
   padding: 0 1rem;
+  z-index: 1;
+  opacity: 1;
 }
 
 .about-content {
