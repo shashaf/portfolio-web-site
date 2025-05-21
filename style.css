@@ -31,19 +31,27 @@ body {
   text-align: center;
   background-color: var(--bg-light);
   color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+[data-theme="dark"] .hero {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
 }
 
 .first-name, .last-name {
   font-family: 'Rubik', sans-serif;
   font-size: 6vw;
   margin: 0.2em 0;
-  color: var(--text-light);
-  background-color: var(--bg-light);
+  background-color: transparent; /* чтоб не перекрывать .hero */
+  color: inherit;
+  transition: color 0.3s;
 }
 
 .marquee-wrapper {
-  background-color: var(--text-light);
-  color: var(--bg-light);
+  background-color: var(--bg-dark); /* всегда черный фон */
+  color: var(--bg-light); /* текст — цвет фона, всегда светлый */
+  transition: none; /* отключаем плавный переход цветов */
   padding: 0.4em 1em;
   border-radius: 9999px;
   overflow: hidden;
