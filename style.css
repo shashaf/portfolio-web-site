@@ -167,6 +167,63 @@ body {
   color: var(--text-dark);
 }
 
+.about-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+.about-button.open {
+  height: 50vh;
+  background-color: var(--accent); /* активный синий фон */
+}
+
+/* Левая и правая часть текста */
+.about-left,
+.about-right {
+  transition: transform 0.5s ease;
+  z-index: 2;
+  padding: 0 0.5em;
+}
+
+/* При активации — раздвигаются */
+.about-button.open .about-left {
+  transform: translateX(-100%);
+}
+.about-button.open .about-right {
+  transform: translateX(100%);
+}
+
+/* Скрытая плашка с текстом */
+.about-content {
+  position: absolute;
+  background: black;
+  color: white;
+  padding: 1em;
+  z-index: 1;
+  max-width: 90vw;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-radius: 0.5em;
+}
+
+/* Показываем при открытии */
+.about-button.open .about-content {
+  opacity: 1;
+}
+
+/* Изначально скрыта */
+.hidden {
+  display: block;
+  pointer-events: none;
+  opacity: 0;
+}
+
 .theme-toggle-button {
   position: fixed;
   bottom: 20px;  /* отступ от низа */
