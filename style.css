@@ -126,7 +126,7 @@ body {
   color: inherit;
   transition: color 0.3s ease;
   width: 100vw;          /* чтобы кнопка занимала всю ширину экрана */
-  text-align: left;      /* чтобы текст оставался слева */
+  text-align: center;      /* чтобы текст оставался слева */
   box-sizing: border-box;
   user-select: none;
 }
