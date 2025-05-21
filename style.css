@@ -185,6 +185,14 @@ body {
   text-align: center;
 }
 
+.about-button::before {
+  display: none !important;
+}
+
+.about-button:hover {
+  color: inherit;
+}
+
 .about-left,
 .about-right {
   font-family: 'Rubik', sans-serif;
