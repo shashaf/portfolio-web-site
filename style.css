@@ -167,11 +167,6 @@ body {
   color: var(--text-dark);
 }
 
-/* При наведении не меняем цвет текста */
-.menu-button:hover {
-  /* color не меняем, оставляем базовый */
-}
-
 .theme-toggle-button {
   position: fixed;
   bottom: 20px;  /* отступ от низа */
