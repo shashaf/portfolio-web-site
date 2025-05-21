@@ -117,24 +117,40 @@ body {
 
 .menu-button {
   font-family: 'Rubik', sans-serif;
-  font-size: 5vw; /* совпадает с li */
+  font-size: 5vw; /* размер текста */
   padding: 0.5em 1em;
   background: none;
   border: none;
   cursor: pointer;
   position: relative;
-  transition: color 0.3s;
+  color: inherit;
+  transition: color 0.3s ease;
+  width: 100vw;          /* чтобы кнопка занимала всю ширину экрана */
+  text-align: left;      /* чтобы текст оставался слева */
+  box-sizing: border-box;
+  user-select: none;
 }
 
-.menu-button:hover::after {
+/* Новый псевдоэлемент — фон подсветки */
+.menu-button::before {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 4px;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
   background-color: var(--accent);
-  animation: fadeOut 1s ease forwards;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;  /* чтобы фон был под текстом */
+  border-radius: 0; /* или поставь нужные радиусы, если надо */
+}
+
+/* При наведении показываем фон и меняем цвет текста */
+.menu-button:hover::before {
+  opacity: 1;
+}
+
+.menu-button:hover {
+  color: var(--text-dark); /* цвет текста на подсветке — светлый */
 }
 
 .theme-toggle-button {
