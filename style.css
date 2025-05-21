@@ -136,3 +136,28 @@ body {
   background-color: var(--accent);
   animation: fadeOut 1s ease forwards;
 }
+
+.theme-toggle-button {
+  position: fixed;
+  bottom: 20px;  /* отступ от низа */
+  right: 20px;   /* отступ от правого края */
+  z-index: 1000; /* поверх всего */
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+  border: none;
+  padding: 0.8em 1.2em;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-toggle-button:hover {
+  background-color: var(--accent);
+  color: var(--text-light);
+}
+
+.collapsible {
+  display: none !important;
+}
