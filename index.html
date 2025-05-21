@@ -1,48 +1,70 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ваше Имя - Портфолио</title>
+  <title>Имя Фамилия — Портфолио</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
+  <header class="hero">
+    <h1><span class="first-name">Имя</span><span class="roles-marquee">Разработчик • Аналитик • Геймдизайнер •</span><span class="last-name">Фамилия</span></h1>
+  </header>
+
+  <nav class="main-nav">
     <ul>
-      <li><a href="#about">Обо мне</a></li>
-      <li><a href="#projects">Проекты</a></li>
-      <li><a href="#contact">Контакты</a></li>
+      <li><button data-target="about">Обо мне</button></li>
+      <li><button data-target="portfolio">Портфолио</button></li>
+      <li><button data-target="contact">Контакты</button></li>
     </ul>
   </nav>
 
-  <header>
-    <h1>ВАШЕ <span class="eye">O</span> ИМЯ</h1>
-    <p>Разработчик, аналитик и геймдизайнер</p>
-  </header>
+  <main>
+    <section id="about" class="collapsible">
+      <h2>Обо мне</h2>
+      <p>Краткая биография, навыки, интересы, образование и опыт работы.</p>
+    </section>
 
-  <section id="about">
-    <h2>Обо мне</h2>
-    <p>Краткая информация о вас.</p>
-  </section>
+    <section id="portfolio" class="collapsible">
+      <h2>Портфолио</h2>
+      <div class="project-group">
+        <h3>📊 Бизнес-аналитика и управление</h3>
+        <ul>
+          <li>Разработка цифровых процессов (датасет по плачу, Telegram-бот, <a href="ссылка-на-док">документ</a>)</li>
+          <li>GDD для собственного игрового проекта — <em>в разработке</em></li>
+        </ul>
 
-  <section id="projects">
-    <h2>Проекты</h2>
-    <div class="accordion">
-      <div class="accordion-item">
-        <button class="accordion-header">Бизнес-аналитика и управление</button>
-        <div class="accordion-content">
-          <p>Описание проектов в этой категории.</p>
-        </div>
+        <h3>🐍 Python</h3>
+        <ul>
+          <li>Система Telegram-ботов (репозиторий приватный)</li>
+          <li>Анализ повторов в песнях</li>
+        </ul>
+
+        <h3>🎮 Игровая разработка</h3>
+        <ul>
+          <li>Прототип на GameMaker</li>
+          <li>Игра для геймджема (2 место)</li>
+          <li>Демоверсия большого проекта</li>
+        </ul>
+
+        <h3>🌐 Веб</h3>
+        <ul>
+          <li>Страница статус-апдейтов для игры</li>
+          <li>Этот сайт-портфолио</li>
+        </ul>
       </div>
-      <!-- Повторить для других категорий -->
-    </div>
-  </section>
+    </section>
 
-  <section id="contact">
-    <h2>Контакты</h2>
-    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-    <p>Telegram: <a href="https://t.me/your_nickname">@your_nickname</a></p>
-  </section>
+    <section id="contact" class="collapsible">
+      <h2>Контакты</h2>
+      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+      <p>Telegram: <a href="https://t.me/yourusername">@yourusername</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <button id="toggle-theme">🌓 Переключить тему</button>
+  </footer>
 
   <script src="script.js"></script>
 </body>
