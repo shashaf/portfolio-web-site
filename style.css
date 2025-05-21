@@ -48,25 +48,30 @@ body {
   border-radius: 9999px;
   overflow: hidden;
   margin: 0.5em 0;
-  display: block;
-  width: 40%; /* фиксированная ширина плашки */
+  width: 40%;
   white-space: nowrap;
+  position: relative;
 }
 
 .roles-marquee {
-  display: inline-block;
-  white-space: nowrap;
+  display: flex;
+  width: fit-content;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee-text {
   font-size: 2.5vw;
   font-family: 'Raleway', sans-serif;
-  animation: marquee 10s linear infinite;
+  padding-right: 2em; /* отступ между копиями */
+  white-space: nowrap;
 }
 
 @keyframes marquee {
-  0% {
-    transform: translateX(100%);
+  from {
+    transform: translateX(0%);
   }
-  100% {
-    transform: translateX(-100%);
+  to {
+    transform: translateX(-50%);
   }
 }
 
