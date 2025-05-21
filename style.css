@@ -18,7 +18,7 @@
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -34,16 +34,19 @@ body {
 }
 
 .first-name, .last-name {
-  font-size: 5vw;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 6vw;
+  letter-spacing: 0.05em;
   margin: 0.2em 0;
 }
 
 .roles-marquee {
-  font-size: 2vw;
+  font-family: 'VT323', monospace;
+  font-size: 2.5vw;
+  color: var(--accent);
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
-  color: var(--accent);
   animation: marquee 15s linear infinite;
 }
 
