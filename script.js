@@ -65,3 +65,30 @@ aboutButton.addEventListener('click', () => {
     aboutButton.classList.add('open');
   }
 });
+
+const contactsButton = document.querySelector('.contacts-button');
+
+contactsButton.addEventListener('click', () => {
+  if (contactsButton.classList.contains('open')) {
+    contactsButton.classList.remove('open');
+    contactsButton.classList.add('close');
+  } else {
+    contactsButton.classList.remove('close');
+    contactsButton.classList.add('open');
+  }
+});
+
+function copyEmail(event) {
+  event.stopPropagation(); // <- предотвращает сворачивание
+
+  const email = document.getElementById("emailText").textContent;
+  navigator.clipboard.writeText(email).then(() => {
+    const notice = document.getElementById("copyNotice");
+    notice.style.opacity = 1;
+    setTimeout(() => {
+      notice.style.opacity = 0;
+    }, 1500);
+  }).catch(err => {
+    console.error("Ошибка копирования: ", err);
+  });
+}
