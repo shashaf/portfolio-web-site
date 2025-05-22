@@ -276,6 +276,94 @@ a {
   transform: translateX(-50%) scale(1); /* увеличивается до 100% */
 }
 
+.portfolio-button {
+  font-family: 'Rubik', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 5vw;
+  font-size: 5vw;
+  font-weight: 400;
+  color: var(--accent);
+  cursor: pointer;
+  user-select: none;
+  width: 100vw;
+  text-align: center;
+  transition: height 0.5s ease;
+}
+
+.portfolio-button:hover {
+  background-color: var(--accent);
+  color: var(--text-light);
+}
+
+.portfolio-label {
+  z-index: 2;
+}
+
+/* Плашка с карточками */
+.portfolio-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20px);
+  background-color: black;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  padding: 1.5rem;
+  width: 90vw;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  border-radius: 2rem;
+  z-index: 1;
+}
+
+.portfolio-button.open {
+  height: 35vh;
+  align-items: flex-start;
+  transition: height 0.5s ease;
+}
+
+.portfolio-button.close {
+  height: 5vw;
+  align-items: center;
+  transition: height 0.5s ease;
+}
+
+.portfolio-button.open .portfolio-content {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+/* Сетка карточек */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+/* Карточка */
+.portfolio-card {
+  background-color: var(--accent);
+  color: var(--text-light);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+  cursor: default;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: scale(1.05);
+  background-color: #333;
+}
+
 .contacts-button {
   font-family: 'Rubik', sans-serif;
   display: flex;

@@ -66,6 +66,11 @@ aboutButton.addEventListener('click', () => {
   }
 });
 
+document.querySelector('.portfolio-button').addEventListener('click', function () {
+  this.classList.toggle('open');
+  this.classList.toggle('close');
+});
+
 const contactsButton = document.querySelector('.contacts-button');
 
 contactsButton.addEventListener('click', () => {
