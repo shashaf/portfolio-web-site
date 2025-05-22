@@ -65,3 +65,15 @@ aboutButton.addEventListener('click', () => {
     aboutButton.classList.add('open');
   }
 });
+
+const contactsButton = document.querySelector('.contacts-button');
+
+contactsButton.addEventListener('click', () => {
+  if (contactsButton.classList.contains('open')) {
+    contactsButton.classList.remove('open');
+    contactsButton.classList.add('close');
+  } else {
+    contactsButton.classList.remove('close');
+    contactsButton.classList.add('open');
+  }
+});

@@ -272,6 +272,86 @@ header {
   transform: translateX(-50%) scale(1); /* увеличивается до 100% */
 }
 
+.contacts-button {
+  font-family: 'Rubik', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 5vw;
+  font-size: 5vw;
+  font-weight: 600;
+  color: var(--accent);
+  cursor: pointer;
+  overflow: hidden;
+  user-select: none;
+  width: 100vw;
+  text-align: center;
+  transition: height 0.5s ease;
+}
+
+.contacts-button::before {
+  display: none !important;
+}
+
+.contacts-button:hover {
+  background-color: var(--accent);
+  color: var(--text-light);
+}
+
+.contacts-left,
+.contacts-right {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  transition: transform 0.5s ease;
+  padding: 0 1rem;
+  z-index: 1;
+  opacity: 1;
+}
+
+.contacts-content {
+  position: absolute;
+  top: 100%; /* ВНИЗ от кнопки */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  padding: 1.5rem;
+  width: 40vw;
+  max-width: 90vw;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+  border-radius: 2rem;
+}
+
+.contacts-button.open {
+  height: 35vh;
+  transition: height 0.5s;
+}
+
+.contacts-button.close {
+  height: 5vw;
+  transition: height 0.5s;
+}
+
+.contacts-button.open .contacts-left {
+  transform: translateX(-22vw);
+}
+
+.contacts-button.open .contacts-right {
+  transform: translateX(22vw);
+}
+
+.contacts-button.open .contacts-content {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .theme-toggle-button {
   position: fixed;
   bottom: 20px;  /* отступ от низа */
