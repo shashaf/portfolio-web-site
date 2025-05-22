@@ -300,12 +300,12 @@ a {
 }
 
 .contacts-label {
-  transition: transform 0.2s ease;
+  /*transition: transform 0.2s ease;*/
   z-index: 2;
 }
 
 .contacts-button:active .contacts-label {
-  transform: rotate(-5deg);
+  /*transform: rotate(-5deg);*/
 }
 
 /* Контейнер с контактной информацией */
@@ -331,13 +331,14 @@ a {
 
 .contacts-button.open {
   height: 35vh;
-  transition: height 0.5s, align-items 0.5s;
   align-items: flex-start;
+  transition: height 0.5s, align-items 0.5s;
 }
 
 .contacts-button.close {
   height: 5vw;
-  transition: height 0.5s;
+  align-items: center;
+  transition: height 0.5s, align-items 0.5s;
 }
 
 /* Показываем плашку */
