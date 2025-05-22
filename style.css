@@ -196,7 +196,7 @@ header {
   font-weight: 600;
   color: var(--accent);
   cursor: pointer;
-  transition: height 0.5s ease;
+  transition: height 2s ease, background-color 2s ease;;
   overflow: hidden;
   user-select: none;
   width: 100vw;
@@ -216,7 +216,7 @@ header {
 .about-right {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
-  transition: transform 0.5s ease;
+  transition: transform 0.9s ease;
   padding: 0 1rem;
   z-index: 1;
   opacity: 1;
@@ -225,7 +225,7 @@ header {
 .about-content {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(0.8); /* начальный масштаб 80% */
   background-color: black;
   color: white;
   font-family: 'Raleway', sans-serif;
@@ -236,9 +236,9 @@ header {
   max-width: 90vw;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.7s ease, transform 0.9s ease; /* плавное появление и масштаб */
   z-index: 1;
-  border-radius: 2rem; /* добавили скругление */
+  border-radius: 2rem;
 }
 
 .about-button.open {
@@ -256,6 +256,7 @@ header {
 .about-button.open .about-content {
   opacity: 1;
   pointer-events: auto;
+  transform: translateX(-50%) scale(1); /* увеличивается до 100% */
 }
 
 .theme-toggle-button {
