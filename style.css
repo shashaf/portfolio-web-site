@@ -133,7 +133,7 @@ header {
 .main-nav li {
   font-family: 'Rubik', sans-serif;
   font-size: 5vw; /* примерно 5% ширины экрана, увеличенный размер */
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
   user-select: none;
   transition: color 0.3s ease;
@@ -192,7 +192,7 @@ header {
   align-items: center;
   height: 5vw;
   font-size: 5vw;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--accent);
   cursor: pointer;
   transition: height 0.7s ease;
@@ -275,12 +275,13 @@ header {
 .contacts-button {
   font-family: 'Rubik', sans-serif;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: start;
   position: relative;
-  height: 5vw;
+  height: 5vh;
   font-size: 5vw;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--accent);
   cursor: pointer;
   overflow: hidden;
@@ -290,47 +291,41 @@ header {
   transition: height 0.5s ease;
 }
 
-.contacts-button::before {
-  display: none !important;
-}
-
 .contacts-button:hover {
   background-color: var(--accent);
   color: var(--text-light);
 }
 
-.contacts-left,
-.contacts-right {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 400;
-  transition: transform 0.5s ease;
-  padding: 0 1rem;
-  z-index: 1;
-  opacity: 1;
+.contacts-label {
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
+
+.contacts-button:active .contacts-label {
+  transform: rotate(-3deg);
 }
 
 .contacts-content {
-  position: absolute;
-  top: 100%; /* ВНИЗ от кнопки */
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  top: 1rem;
   background-color: black;
   color: white;
   font-family: 'Raleway', sans-serif;
   font-size: 1.2rem;
   line-height: 1.6;
   padding: 1.5rem;
-  width: 40vw;
+  width: 25vw;
   max-width: 90vw;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.5s ease;
-  z-index: 1;
+  transition: opacity 0.5s ease, transform 0.5s ease;
   border-radius: 2rem;
+  transform: translateY(-20px);
+  z-index: 1;
 }
 
 .contacts-button.open {
-  height: 35vh;
+  height: 30vh;
   transition: height 0.5s;
 }
 
@@ -339,17 +334,10 @@ header {
   transition: height 0.5s;
 }
 
-.contacts-button.open .contacts-left {
-  transform: translateX(-22vw);
-}
-
-.contacts-button.open .contacts-right {
-  transform: translateX(22vw);
-}
-
 .contacts-button.open .contacts-content {
   opacity: 1;
   pointer-events: auto;
+  transform: translateY(0);
 }
 
 .theme-toggle-button {
