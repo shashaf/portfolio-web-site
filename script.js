@@ -57,6 +57,11 @@ document.addEventListener("scroll", function () {
 const aboutButton = document.querySelector('.about-button');
 
 aboutButton.addEventListener('click', () => {
-    aboutButton.classList.toggle('open');
-    aboutButton.classList.toggle('close')
+  if (aboutButton.classList.contains('open')) {
+    aboutButton.classList.remove('open');
+    aboutButton.classList.add('close');
+  } else {
+    aboutButton.classList.remove('close');
+    aboutButton.classList.add('open');
+  }
 });
