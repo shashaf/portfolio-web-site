@@ -42,6 +42,18 @@ document.addEventListener("DOMContentLoaded", function () {
   animate();
 });
 
+document.addEventListener("scroll", function () {
+  const details = document.querySelector('.Details');
+  const header = document.querySelector('header');
+  const headerBottom = header.getBoundingClientRect().bottom;
+
+  if (headerBottom < 700) {
+    details.classList.add('hidden');
+  } else {
+    details.classList.remove('hidden');
+  }
+});
+
 const aboutButton = document.querySelector('.about-button');
 
 aboutButton.addEventListener('click', () => {

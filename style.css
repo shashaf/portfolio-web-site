@@ -22,6 +22,10 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+header {
+  position: relative;
+}
+
 .hero {
   height: 100vh;
   display: flex;
@@ -73,6 +77,24 @@ body {
   padding-right: 2em;
   white-space: nowrap;
   flex-shrink: 0;
+}
+
+.Details {
+  position: absolute;
+  bottom: 2vh; /* почти у нижней границы */
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.2rem;
+  color: var(--text);
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  user-select: none;
+}
+
+.Details.hidden {
+  opacity: 0;
 }
 
 /* Удаляем .spacer полностью, поэтому удаляем и его стили */
