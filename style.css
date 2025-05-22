@@ -283,7 +283,7 @@ header {
   font-weight: 600;
   color: var(--accent);
   cursor: pointer;
-  overflow: hidden;
+  
   user-select: none;
   width: 100vw;
   text-align: center;
