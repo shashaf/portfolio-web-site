@@ -190,13 +190,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   height: 5vw;
   font-size: 5vw;
   font-weight: 600;
   color: var(--accent);
   cursor: pointer;
-  transition: height 0.5s ease;
+  transition: height 0.7s ease;
   overflow: hidden;
   user-select: none;
   width: 100vw;
@@ -225,7 +224,7 @@ header {
 .about-content {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(0.8); /* начальный масштаб 80% */
   background-color: black;
   color: white;
   font-family: 'Raleway', sans-serif;
@@ -236,13 +235,27 @@ header {
   max-width: 90vw;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.7s ease, transform 0.7s ease; /* плавное появление и масштаб */
   z-index: 1;
-  border-radius: 2rem; /* добавили скругление */
+  border-radius: 2rem;
 }
 
 .about-button.open {
   height: 50vh;
+  transition: height 0.5s;
+}
+
+.about-button.close {
+  height: 5vh;
+  transition: height 0.5s;
+}
+
+.about-inner {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-button.open .about-left {
@@ -256,6 +269,7 @@ header {
 .about-button.open .about-content {
   opacity: 1;
   pointer-events: auto;
+  transform: translateX(-50%) scale(1); /* увеличивается до 100% */
 }
 
 .theme-toggle-button {
