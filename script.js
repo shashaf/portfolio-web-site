@@ -58,4 +58,5 @@ const aboutButton = document.querySelector('.about-button');
 
 aboutButton.addEventListener('click', () => {
     aboutButton.classList.toggle('open');
+    aboutButton.classList.toggle('close')
 });

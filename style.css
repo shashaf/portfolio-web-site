@@ -190,13 +190,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   height: 5vw;
   font-size: 5vw;
   font-weight: 600;
   color: var(--accent);
   cursor: pointer;
-  transition: height 2s ease, background-color 2s ease;;
+  transition: height 0.7s ease;
   overflow: hidden;
   user-select: none;
   width: 100vw;
@@ -216,7 +215,7 @@ header {
 .about-right {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
-  transition: transform 0.9s ease;
+  transition: transform 0.5s ease;
   padding: 0 1rem;
   z-index: 1;
   opacity: 1;
@@ -236,13 +235,27 @@ header {
   max-width: 90vw;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.7s ease, transform 0.9s ease; /* плавное появление и масштаб */
+  transition: opacity 0.7s ease, transform 0.7s ease; /* плавное появление и масштаб */
   z-index: 1;
   border-radius: 2rem;
 }
 
 .about-button.open {
   height: 50vh;
+  transition: height 0.5s;
+}
+
+.about-button.close {
+  height: 5vh;
+  transition: height 0.5s;
+}
+
+.about-inner {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-button.open .about-left {
