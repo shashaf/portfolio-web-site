@@ -117,10 +117,6 @@ body {
   transition: color 0.3s ease;
 }
 
-.main-nav li:hover {
-  color: var(--accent);
-}
-
 /* Можно оставить старый класс .menu-button, если он используется */
 
 .menu-button {
@@ -165,6 +161,79 @@ body {
 /* Цвет текста кнопок меню в тёмной теме */
 [data-theme="dark"] .menu-button {
   color: var(--text-dark);
+}
+
+.about-button {
+  font-family: 'Rubik', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 5vw;
+  font-size: 5vw;
+  font-weight: 600;
+  color: var(--accent);
+  cursor: pointer;
+  transition: height 0.5s ease;
+  overflow: hidden;
+  user-select: none;
+  width: 100vw;
+  text-align: center;
+}
+
+.about-button::before {
+  display: none !important;
+}
+
+.about-button:hover {
+  background-color: var(--accent);
+  color: var(--text-light);
+}
+
+.about-left,
+.about-right {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  transition: transform 0.5s ease;
+  padding: 0 1rem;
+  z-index: 1;
+  opacity: 1;
+}
+
+.about-content {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  padding: 1.5rem;
+  width: 40vw;
+  max-width: 90vw;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+  border-radius: 2rem; /* добавили скругление */
+}
+
+.about-button.open {
+  height: 50vh;
+}
+
+.about-button.open .about-left {
+  transform: translateX(-22vw); /* левое слово отходит влево от центра */
+}
+
+.about-button.open .about-right {
+  transform: translateX(22vw); /* правое — вправо */
+}
+
+.about-button.open .about-content {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .theme-toggle-button {
