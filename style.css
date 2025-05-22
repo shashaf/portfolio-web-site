@@ -317,6 +317,27 @@ a {
   filter: brightness(0) saturate(100%) invert(60%) sepia(80%) saturate(600%) hue-rotate(180deg); /* для перекраски, опционально */
 }
 
+.email-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.copy-notice {
+  position: absolute;
+  top: -1.4rem;
+  left: 0;
+  background-color: var(--accent, #007bff);
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.4rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
 /* Контейнер с контактной информацией */
 .contacts-content {
   position: absolute;

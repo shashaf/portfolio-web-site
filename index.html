@@ -42,9 +42,12 @@
       <li class="menu-button contacts-button close">
       <span class="contacts-label">Контакты</span>
       <div class="contacts-content hidden">
-        <div class="contact-item">
+        <div class="contact-item email-item" onclick="copyEmail()">
           <i class="fas fa-envelope"></i>
-          <p>Email: <a href="emailto:sanfom24@gmail.com">sanfom24@gmail.com</a></p>
+          <div class="email-wrapper">
+            <div class="copy-notice" id="copyNotice">Скопировано!</div>
+            <p>Email: <span id="emailText">sanfom24@gmail.com</span></p>
+          </div>
         </div>
         <div class="contact-item">
           <img src="assets/telegram-brands-solid.svg" alt="Telegram" class="contact-icon">

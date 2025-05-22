@@ -77,3 +77,16 @@ contactsButton.addEventListener('click', () => {
     contactsButton.classList.add('open');
   }
 });
+
+function copyEmail() {
+    const email = document.getElementById("emailText").textContent;
+    navigator.clipboard.writeText(email).then(() => {
+      const notice = document.getElementById("copyNotice");
+      notice.style.opacity = 1;
+      setTimeout(() => {
+        notice.style.opacity = 0;
+      }, 1500);
+    }).catch(err => {
+      console.error("Ошибка копирования: ", err);
+    });
+  }
