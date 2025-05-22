@@ -42,11 +42,11 @@
       <li class="menu-button contacts-button close">
       <span class="contacts-label">Контакты</span>
       <div class="contacts-content hidden">
-        <div class="contact-item email-item" onclick="copyEmail()">
+        <div class="contact-item email-item" onclick="copyEmail(event)">
           <i class="fas fa-envelope"></i>
           <div class="email-wrapper">
             <div class="copy-notice" id="copyNotice">Скопировано!</div>
-            <p>Email: <span id="emailText">sanfom24@gmail.com</span></p>
+            <p>Email: <span id="emailText" class="clickable-email">sanfom24@gmail.com</span></p>
           </div>
         </div>
         <div class="contact-item">

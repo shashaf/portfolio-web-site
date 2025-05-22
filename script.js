@@ -78,15 +78,17 @@ contactsButton.addEventListener('click', () => {
   }
 });
 
-function copyEmail() {
-    const email = document.getElementById("emailText").textContent;
-    navigator.clipboard.writeText(email).then(() => {
-      const notice = document.getElementById("copyNotice");
-      notice.style.opacity = 1;
-      setTimeout(() => {
-        notice.style.opacity = 0;
-      }, 1500);
-    }).catch(err => {
-      console.error("Ошибка копирования: ", err);
-    });
-  }
+function copyEmail(event) {
+  event.stopPropagation(); // <- предотвращает сворачивание
+
+  const email = document.getElementById("emailText").textContent;
+  navigator.clipboard.writeText(email).then(() => {
+    const notice = document.getElementById("copyNotice");
+    notice.style.opacity = 1;
+    setTimeout(() => {
+      notice.style.opacity = 0;
+    }, 1500);
+  }).catch(err => {
+    console.error("Ошибка копирования: ", err);
+  });
+}

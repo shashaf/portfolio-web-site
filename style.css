@@ -323,6 +323,11 @@ a {
   flex-direction: column;
 }
 
+.clickable-email {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .copy-notice {
   position: absolute;
   top: -1.4rem;
