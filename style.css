@@ -26,6 +26,10 @@ header {
   position: relative;
 }
 
+a {
+  color: var(--text-dark)
+}
+
 .hero {
   height: 100vh;
   display: flex;
@@ -280,7 +284,7 @@ header {
   position: relative;
   height: 5vw;
   font-size: 5vw;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--accent);
   cursor: pointer;
   
@@ -301,13 +305,13 @@ header {
 }
 
 .contacts-button:active .contacts-label {
-  transform: rotate(-3deg);
+  transform: rotate(-5deg);
 }
 
 /* Контейнер с контактной информацией */
 .contacts-content {
   position: absolute;
-  top: 100%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -20px);
   background-color: black;
@@ -316,7 +320,7 @@ header {
   font-size: 1.2rem;
   line-height: 1.6;
   padding: 1.5rem;
-  width: 40vw; /* ← ты можешь здесь подставить свою нужную ширину */
+  width: 20vw; /* ← ты можешь здесь подставить свою нужную ширину */
   max-width: 90vw;
   opacity: 0;
   pointer-events: none;
@@ -326,8 +330,9 @@ header {
 }
 
 .contacts-button.open {
-  height: 30vh;
-  transition: height 0.5s;
+  height: 35vh;
+  transition: height 0.5s, align-items 0.5s;
+  align-items: flex-start;
 }
 
 .contacts-button.close {
