@@ -275,13 +275,12 @@ header {
 .contacts-button {
   font-family: 'Rubik', sans-serif;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   position: relative;
-  height: 5vh;
+  height: 5vw;
   font-size: 5vw;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--accent);
   cursor: pointer;
   overflow: hidden;
@@ -305,22 +304,24 @@ header {
   transform: rotate(-3deg);
 }
 
+/* Контейнер с контактной информацией */
 .contacts-content {
-  position: relative;
-  top: 1rem;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -20px);
   background-color: black;
   color: white;
   font-family: 'Raleway', sans-serif;
   font-size: 1.2rem;
   line-height: 1.6;
   padding: 1.5rem;
-  width: 25vw;
+  width: 40vw; /* ← ты можешь здесь подставить свою нужную ширину */
   max-width: 90vw;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease, transform 0.5s ease;
   border-radius: 2rem;
-  transform: translateY(-20px);
   z-index: 1;
 }
 
@@ -334,11 +335,13 @@ header {
   transition: height 0.5s;
 }
 
+/* Показываем плашку */
 .contacts-button.open .contacts-content {
   opacity: 1;
   pointer-events: auto;
-  transform: translateY(0);
+  transform: translate(-50%, 0);
 }
+
 
 .theme-toggle-button {
   position: fixed;
