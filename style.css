@@ -310,9 +310,11 @@ a {
   gap: 0.8rem;
 }
 
-.contact-item i {
-  font-size: 1.2rem;
-  color: var(--accent); /* чтобы иконки сочетались с дизайном */
+.contact-icon {
+  width: 1.4rem;
+  height: 1.4rem;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(60%) sepia(80%) saturate(600%) hue-rotate(180deg); /* для перекраски, опционально */
 }
 
 /* Контейнер с контактной информацией */
