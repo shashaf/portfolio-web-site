@@ -304,8 +304,15 @@ a {
   z-index: 2;
 }
 
-.contacts-button:active .contacts-label {
-  /*transform: rotate(-5deg);*/
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.contact-item i {
+  font-size: 1.2rem;
+  color: var(--accent); /* чтобы иконки сочетались с дизайном */
 }
 
 /* Контейнер с контактной информацией */
@@ -345,7 +352,7 @@ a {
 .contacts-button.open .contacts-content {
   opacity: 1;
   pointer-events: auto;
-  transform: translate(-50%, 0);
+  /*transform: translate(-50%, 0);*/
 }
 
 
