@@ -159,6 +159,11 @@ a {
   text-align: center;      /* чтобы текст оставался слева */
   box-sizing: border-box;
   user-select: none;
+  margin-bottom: 2vh;
+}
+
+.menu-button:last-child {
+  margin-bottom: 0;
 }
 
 /* Новый псевдоэлемент — фон подсветки */
