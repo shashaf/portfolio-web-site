@@ -538,10 +538,18 @@ a {
   align-items: flex-start;
 }
 
+.project-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1.5em;
+}
+
 .project-card {
   background: var(--bg-dark);
   color: var(--text-dark);
   padding: 1.5em;
+  padding-top: 0.2em;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   flex: 1 1 30%;
