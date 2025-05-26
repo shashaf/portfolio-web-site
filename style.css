@@ -535,6 +535,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 1.5em; /* немного воздуха между карточками */
+  align-items: flex-start;
 }
 
 .project-card {
@@ -565,7 +566,6 @@ a {
 
 /* Боковые карточки */
 .project-card.side {
-  align-self: center;
   flex: 1 1 25%;
 }
 
