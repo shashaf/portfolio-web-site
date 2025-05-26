@@ -43,6 +43,7 @@ a {
   text-align: center;
   background-color: var(--bg-light);
   color: var(--text-light);
+  padding-top: 0;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -94,7 +95,7 @@ a {
   transform: translateX(-50%);
   font-family: 'Rubik', sans-serif;
   font-size: 1.2rem;
-  color: var(--text);
+  color: var(--text-light);
   opacity: 1;
   transition: opacity 0.5s ease;
   pointer-events: none;
@@ -105,19 +106,6 @@ a {
   opacity: 0;
 }
 
-/* Удаляем .spacer полностью, поэтому удаляем и его стили */
-
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: var(--bg-light);
-  color: var(--text-light);
-  padding-top: 0; /* можно явно убрать, если где-то есть */
-}
 
 /* Основное меню */
 
