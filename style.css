@@ -501,3 +501,47 @@ a {
 .collapsible {
   display: none !important;
 }
+
+/* 1. Базовые стили для мобильных экранов */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden; /* 3. Запрет прокрутки вправо */
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .name {
+    font-size: 2.2em; /* 1. Крупный текст */
+    font-weight: bold;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.5em; /* 1. Заголовок под именем */
+    margin-top: 10px;
+  }
+
+  .marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+
+  .marquee-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 20s linear infinite; /* 2. Замедленная прокрутка */
+  }
+}
+
+/* 2. Замедленная анимация бегущей строки */
+@keyframes marquee {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
