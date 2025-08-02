@@ -607,7 +607,7 @@ body.portfolio-page {
 }
 
 /* Поддержка на мобильных устройствах */
-@media (max-width: 900px) {
+@media (max-width: 760px) {
   .mobile-warning {
     display: block;
     position: relative;
