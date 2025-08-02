@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Frontend – Портфолио</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700&family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;600&family=Rubik:wght@400;700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="portfolio-page">
+  <header class="portfolio-page-header">
+    <h1 class="section-title">Frontend</h1>
+  </header>
+  <main class="projects-container">
+    <!-- Проект 1 -->
+    <section class="project-section">
+      <h2 class="project-title">Сайт-визитка</h2>
+      <div class="project-content">
+        <div class="project-cards">
+          <div class="project-card side">
+            <h3>Задействованные технологии</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Java Script</li>
+            </ul>
+          </div>
+          <div class="project-card side">
+            <h3>Мои роли</h3>
+            <ul>
+              <li>Веб-дизайнер</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-card description">
+          <h3>Описание проекта</h3>
+          <p>Веб-страница, представляющая собой <span class="accent-text">“цифровое резюме”</span> с краткой информацией обо мне, портфолио проектов и контактными данными.</p>
+          <p>Версия для мобильных устройств находится в разработке.</p>
+          <p><br></p>
+
+        </div>
+        <div class="project-cards">
+          <div class="project-card side">
+            <h3>Ссылки</h3>
+            <ul>
+              <li><a class="accent-text" href="https://github.com/shashaf/portfolio-web-site" target="_blank">Репозиторий на Github</a></li>
+            </ul>
+          </div>
+          <div class="project-card side">
+            <h3><span class="accent-text">Планы по доработке</span></h3>
+            <p>"1. Версия для мобильных устройств"</p>
+            <p>"2. Полировка анимаций"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <button id="toggle-theme" class="theme-toggle-button">🌃 Переключить тему</button>
+  </footer>
+
+  <script src="script_portfolio.js"></script>
+</body>
+
+</html>

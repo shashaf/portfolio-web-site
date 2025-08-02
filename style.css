@@ -608,7 +608,7 @@ body.portfolio-page {
   }
 }
 
-.gamedev-header {
+.portfolio-page-header {
   margin-bottom: 2em; /* Было больше — стало компактнее */
 }
 
