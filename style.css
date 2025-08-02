@@ -57,6 +57,11 @@ a {
   color: var(--text-dark);
 }
 
+[data-theme="dark"] .portfolio-page {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
 .first-name, .last-name {
   font-family: 'Rubik', sans-serif;
   font-size: 6vw;
