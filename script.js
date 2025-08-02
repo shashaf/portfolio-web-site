@@ -97,3 +97,14 @@ function copyEmail(event) {
     console.error("Ошибка копирования: ", err);
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".portfolio-card").forEach(card => {
+      card.addEventListener("click", () => {
+        const link = card.dataset.link;
+        if (link) {
+          window.open(link, "_blank");
+        }
+      });
+    });
+  });
