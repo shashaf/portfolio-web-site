@@ -595,16 +595,31 @@ body.portfolio-page {
   padding: 4rem 2rem;
 }
 
+/* По умолчанию сообщение скрыто */
+.mobile-warning {
+  display: none;
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
 /* Поддержка на мобильных устройствах */
 @media (max-width: 900px) {
-  .project-content {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+  .mobile-warning {
+    display: block;
+    position: relative;
+    z-index: 10;
   }
 
-  .project-card.description {
-    min-height: unset;
-    width: 100%;
+  /* Скрываем основной контент */
+  header,
+  nav,
+  main,
+  footer {
+    display: none;
   }
 }
 
