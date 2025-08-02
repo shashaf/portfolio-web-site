@@ -606,6 +606,17 @@ body.portfolio-page {
   line-height: 1.5;
 }
 
+.portfolio-page-header {
+  margin-bottom: 2em; /* Было больше — стало компактнее */
+}
+
+.section-title {
+  font-size: 3em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em; /* Добавляет аккуратный отступ вниз */
+  text-align: center;
+}
+
 /* Поддержка на мобильных устройствах */
 @media (max-width: 760px) {
   .mobile-warning {
@@ -621,15 +632,4 @@ body.portfolio-page {
   footer {
     display: none;
   }
-}
-
-.portfolio-page-header {
-  margin-bottom: 2em; /* Было больше — стало компактнее */
-}
-
-.section-title {
-  font-size: 3em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em; /* Добавляет аккуратный отступ вниз */
-  text-align: center;
 }
