@@ -630,6 +630,6 @@ body.portfolio-page {
   nav,
   main,
   footer {
-    display: none;
+    display: none !important;
   }
 }
