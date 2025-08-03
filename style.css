@@ -595,16 +595,7 @@ body.portfolio-page {
   padding: 4rem 2rem;
 }
 
-/* По умолчанию сообщение скрыто */
-.mobile-warning {
-  display: none;
-  background-color: #222;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  font-size: 1.2em;
-  line-height: 1.5;
-}
+
 
 .portfolio-page-header {
   margin-bottom: 2em; /* Было больше — стало компактнее */
@@ -660,6 +651,42 @@ body.portfolio-page {
 .gallery-button.prev { left: 10px; }
 .gallery-button.next { right: 10px; }
 
+/* По умолчанию сообщение скрыто */
+.mobile-warning {
+  display: none;
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.mobile-warning #caution-tape1 {
+  position: absolute;
+  left: 50%;  /* смещаем влево, чтобы перекрыть */
+  bottom: -100px; /* немного ниже текста */
+  width: 15%;    /* растягиваем, чтобы точно перекрыть */
+  height: 900%;
+  top: 100%;
+  transform: rotate(45deg); /* диагональный поворот */
+  opacity: 0.7;  /* полупрозрачность для стиля */
+  pointer-events: none; /* чтобы не мешало кликам */
+  z-index: -1;   /* чтобы было под текстом */
+}
+
+.mobile-warning #caution-tape2 {
+  position: absolute;
+  left: 50%;  /* смещаем влево, чтобы перекрыть */
+  bottom: -100px; /* немного ниже текста */
+  width: 15%;    /* растягиваем, чтобы точно перекрыть */
+  height: 900%;
+  top: 55%;
+  transform: rotate(-30deg); /* диагональный поворот */
+  opacity: 0.7;  /* полупрозрачность для стиля */
+  pointer-events: none; /* чтобы не мешало кликам */
+  z-index: -1;   /* чтобы было под текстом */
+}
 
 /* Поддержка на мобильных устройствах */
 @media (max-width: 760px) {
