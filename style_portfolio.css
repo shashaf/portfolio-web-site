@@ -74,130 +74,90 @@ a {
 /*Страницы с портфолио*/
 
 .section-title {
-  font-size: 3rem;
-  color: var(--accent);
-  text-align: center;
-  margin-bottom: 2rem;
+  color: var(--accent) 
 }
 
-.project-section {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2rem 2rem;
-  font-size: 1.5rem;
-  line-height: 1.8;
-  margin-bottom: 0.1em;
-}
-
-.project-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-.project-section p {
-  margin-bottom: 1.5rem;
-}
-
-.project-title {
-  font-size: 2.5rem;
-  color: var(--accent);
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
+/* Контейнер секции */
 .project-content {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-areas:
-    "left1 left2 center right1 right2";
-  gap: 1.5em;
-  align-items: stretch;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  grid-template-columns: 1fr 2fr 1fr; /* Боковые карточки: 1, центр: 2 */
+  gap: 20px; /* Отступ между колонками */
+  align-items: stretch; /* Растягивает все колонки по высоте */
 }
 
-.project-card.left1 {
-  grid-area: left1;
+/* Левая и правая колонка: по 2 карточки вертикально */
+.project-cards {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  height: 100%;
 }
 
-.project-card.left2 {
-  grid-area: left2;
-}
-
-.project-card.description {
-  grid-area: center;
-}
-
-.project-card.right1 {
-  grid-area: right1;
-}
-
-.project-card.right2 {
-  grid-area: right2;
-}
-
-/*.project-cards {
+/* Центральная карточка занимает всю высоту */
+.project-card.center {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  gap: 1.5em;
-}*/
-
-.project-card {
-  background: var(--bg-dark);
-  color: var(--text-dark);
-  padding: 1.5em;
-  padding-top: 0.2em;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--bg-dark);
+  border: 1px solid var(--bg-light);
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  /*flex: 1 1 30%;*/
-  box-sizing: border-box;
-  min-width: 250px;
-  font-size: 1rem;
+  color: var(--text-dark)
 }
 
+/* Универсальные стили для карточек */
+.project-card {
+  padding: 20px;
+  background-color: var(--bg-dark);
+  border: 1px solid var(--bg-light);
+  border-radius: 10px;
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Чтобы не слипались тексты и блоки */
 .project-card h3 {
-  color: var(--accent);
-  margin-bottom: 0.75rem;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
-/* Центральная карточка больше */
-.project-card.description {
-  width: 100%;
-  height: 100%;
-  min-height: 300px;
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-  flex: 2 1 40%; /* Средняя шире, боковые уже */
+.project-card p,
+.project-card ul,
+.project-card li {
+  margin: 5px 0;
 }
 
-/* Боковые карточки */
-.project-card.side {
-  flex: 1 1 25%;
+/* Заголовок проекта */
+.project-title {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: var(--accent)
 }
 
-/* Сделаем страницу более просторной */
-body.portfolio-page {
-  background-color: var(--bg-light);
-  color: var(--text-light);
-  font-family: 'Rubik', sans-serif;
-  padding: 4rem 2rem;
+/* Адаптивность пока не затрагиваем, но обеспечим минимум */
+@media (min-width: 800px) {
+  .project-content {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
 }
 
+@media (max-width: 799px) {
+  .project-content {
+    display: block;
+  }
 
-.portfolio-page-header {
-  margin-bottom: 2em; /* Было больше — стало компактнее */
+  .project-cards {
+    display: block;
+  }
+
+  .project-card.center {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 
-.section-title {
-  font-size: 3em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em; /* Добавляет аккуратный отступ вниз */
-  text-align: center;
-}
 
 /*Галерея*/
 
