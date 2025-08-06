@@ -98,10 +98,16 @@ a {
 /* Левая и правая колонка: по 2 карточки вертикально */
 .project-cards {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto 1 fr auto;
   gap: 40px;
   height: 100%;
 }
+
+.spacer {
+  /*flex-grow: 1;*/
+  background: none;
+}
+
 
 /* Центральная карточка занимает всю высоту */
 .project-card.center {
