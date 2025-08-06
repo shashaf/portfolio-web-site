@@ -74,7 +74,16 @@ a {
 /*Страницы с портфолио*/
 
 .section-title {
-  color: var(--accent) 
+  color: var(--accent);
+  text-align: center; /* Добавлено */
+}
+
+/* Заголовок проекта */
+.project-title {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: var(--accent);
+  text-align: center;
 }
 
 /* Контейнер секции */
@@ -130,12 +139,7 @@ a {
   margin: 5px 0;
 }
 
-/* Заголовок проекта */
-.project-title {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-  color: var(--accent)
-}
+
 
 /* Адаптивность пока не затрагиваем, но обеспечим минимум */
 @media (min-width: 800px) {
