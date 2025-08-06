@@ -1,0 +1,245 @@
+:root {
+  --bg-light: #f0f0f0;
+  --bg-dark: #181818;
+  --text-light: #000;
+  --text-dark: #fff;
+  --accent: #4390ef;
+  --other-accent: #ffa500;
+}
+
+[data-theme="light"] {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+[data-theme="dark"] {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  position: relative;
+}
+
+a {
+  color: var(--text-dark)
+}
+
+.accent-text {
+  color: var(--accent)
+}
+
+.other-accent-text {
+  color: var(--other-accent)
+}
+
+
+[data-theme="dark"] .portfolio-page {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+
+.theme-toggle-button {
+  position: fixed;
+  bottom: 20px;  /* отступ от низа */
+  right: 20px;   /* отступ от правого края */
+  z-index: 1000; /* поверх всего */
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+  border: none;
+  padding: 0.8em 1.2em;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-toggle-button:hover {
+  background-color: var(--accent);
+  color: var(--text-light);
+}
+
+.collapsible {
+  display: none !important;
+}
+
+/*Страницы с портфолио*/
+
+.section-title {
+  font-size: 3rem;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.project-section {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 2rem;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin-bottom: 0.1em;
+}
+
+.project-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.project-section p {
+  margin-bottom: 1.5rem;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.project-content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas:
+    "left1 left2 center right1 right2";
+  gap: 1.5em;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card.left1 {
+  grid-area: left1;
+}
+
+.project-card.left2 {
+  grid-area: left2;
+}
+
+.project-card.description {
+  grid-area: center;
+}
+
+.project-card.right1 {
+  grid-area: right1;
+}
+
+.project-card.right2 {
+  grid-area: right2;
+}
+
+/*.project-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1.5em;
+}*/
+
+.project-card {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+  padding: 1.5em;
+  padding-top: 0.2em;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  /*flex: 1 1 30%;*/
+  box-sizing: border-box;
+  min-width: 250px;
+  font-size: 1rem;
+}
+
+.project-card h3 {
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+/* Центральная карточка больше */
+.project-card.description {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  flex: 2 1 40%; /* Средняя шире, боковые уже */
+}
+
+/* Боковые карточки */
+.project-card.side {
+  flex: 1 1 25%;
+}
+
+/* Сделаем страницу более просторной */
+body.portfolio-page {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  font-family: 'Rubik', sans-serif;
+  padding: 4rem 2rem;
+}
+
+
+.portfolio-page-header {
+  margin-bottom: 2em; /* Было больше — стало компактнее */
+}
+
+.section-title {
+  font-size: 3em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em; /* Добавляет аккуратный отступ вниз */
+  text-align: center;
+}
+
+/*Галерея*/
+
+.gallery-container {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-slider {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.gallery-slider img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.gallery-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.gallery-button:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.gallery-button.prev { left: 10px; }
+.gallery-button.next { right: 10px; }
