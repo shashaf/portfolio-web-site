@@ -81,15 +81,16 @@ a {
 .project-content {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr; /* Боковые карточки: 1, центр: 2 */
-  gap: 20px; /* Отступ между колонками */
+  gap: 40px; /* Отступ между колонками */
   align-items: stretch; /* Растягивает все колонки по высоте */
+  padding: 0 40px;
 }
 
 /* Левая и правая колонка: по 2 карточки вертикально */
 .project-cards {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  gap: 20px;
+  gap: 40px;
   height: 100%;
 }
 
