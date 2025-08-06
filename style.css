@@ -541,19 +541,43 @@ a {
 }
 
 .project-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1.5em; /* немного воздуха между карточками */
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas:
+    "left1 left2 center right1 right2";
+  gap: 1.5em;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.project-cards {
+.project-card.left1 {
+  grid-area: left1;
+}
+
+.project-card.left2 {
+  grid-area: left2;
+}
+
+.project-card.description {
+  grid-area: center;
+}
+
+.project-card.right1 {
+  grid-area: right1;
+}
+
+.project-card.right2 {
+  grid-area: right2;
+}
+
+/*.project-cards {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   gap: 1.5em;
-}
+}*/
 
 .project-card {
   background: var(--bg-dark);
@@ -562,9 +586,10 @@ a {
   padding-top: 0.2em;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  flex: 1 1 30%;
+  /*flex: 1 1 30%;*/
   box-sizing: border-box;
   min-width: 250px;
+  font-size: 1rem;
 }
 
 .project-card h3 {
@@ -607,6 +632,8 @@ body.portfolio-page {
   margin-bottom: 0.5em; /* Добавляет аккуратный отступ вниз */
   text-align: center;
 }
+
+/*Галерея*/
 
 .gallery-container {
   position: relative;
