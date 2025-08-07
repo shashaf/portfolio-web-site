@@ -409,6 +409,10 @@ a {
   width: 1.4rem;
   height: 1.4rem;
   object-fit: contain;
+  
+}
+
+#telegram {
   filter: brightness(0) saturate(100%) invert(60%) sepia(80%) saturate(600%) hue-rotate(180deg); /* для перекраски, опционально */
 }
 
